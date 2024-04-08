@@ -12,7 +12,7 @@ Multiple commands written in succession will be executed in order from first to 
 # print("Welcome to Algorithms and Data Structures!")
 # print("First we will practice using the print command.")
 # print("This program prints three lines of text on the screen.")
-
+# print("123")
 """
 You can also put arithmetic operations inside a print command. 
 Running it will then print out the result of the operation. 

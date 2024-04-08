@@ -20,7 +20,10 @@ as long as a specified condition is true. It has the following syntax:
 # while j < 10:
 #     print(j) # print(j, end="")
 #     j += 1
-
+# The += operator is used for addition and assignment in programming.
+# It combines the addition operation with assignment, updating the value of a variable by adding another value to it. Here’s how it works:
+#
+# x += y is equivalent to x = x + y.
 """
 While True - infinite loops
 A "while True" loop, also known as an infinite loop, is a construct in Python where the loop condition is always True. 
@@ -37,7 +40,13 @@ To stop the loop we need to use the "break" statement, which stops the loop - th
 #
 # print("After loop block. Thanks and bye!")
 #
+# The ** operator in programming is used
+# for exponentiation.It raises the left operand to the power of the right operand.For example:
 #
+# x ** y
+# calculates(x) raised to the power of(y).
+# #
+
 # while True:
 #     code = input("Please type in your PIN: ")
 #     if code == "1234":

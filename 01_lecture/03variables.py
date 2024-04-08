@@ -97,8 +97,8 @@ If we do want to print out a string and an integer in a single command, the inte
 the str function, and the two strings can then be combined normally. 
 For example, this would work:
 """
-# result = 10 * 25
-# print("The result is " + str(result))
+result = 10 * 25
+print("The result is " + str(result))
 
 """
 The print command also has built-in functionalities that support combining different types of values. 
@@ -107,7 +107,7 @@ All the values will be printed out regardless of their type:
 """
 
 # result = 10 * 25
-# print("The result is", result)
+print("The result is", result)
 
 """
 Printing with f-strings

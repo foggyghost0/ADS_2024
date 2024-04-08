@@ -1,3 +1,5 @@
+from math import sqrt
+
 """
 Write a program that prints out the message "hello world!" and then asks "shall we continue?"
 until the user inputs "no". Then the program should print out "okay then" and finish.
@@ -13,7 +15,12 @@ Example:
     shall we continue? >> no
     okay then
 """
-# Write your solution here
+# while True:
+#     print("Hello World!")
+#     user_input = input("shall we continue?")
+#     if user_input == "no":
+#         print("okay then")
+#     break
 
 """
 Write a program which asks the user for integer numbers.
@@ -40,22 +47,34 @@ Example:
     Please type in a number: >> 0
     Exiting...
 """
-# Write your solution here
+
+
+# while True:
+#     number = int(input("Please type in a number: "))
+#     if number == 0:
+#         print("exiting...")
+#         break
+#     elif number < 0:
+#         print("invalid number")
+#     elif number > 0:
+#         print(sqrt(number))
+
+
+
 
 """
 This program should print out a countdown. However, the program doesn't quite work. Please fix it.
 Hint: you can use the debugger of PyCharm to see how the program is executing.
 """
-# Fix the code
-number = 5
-print("Countdown!")
-while True:
-  print(number)
-  number = number - 1
-  if number > 0:
-    break
 
-print("Now!")
+# number = 5
+# print("Countdown!")
+# while True:
+#     print(number)
+#     number -= 1
+#     if number < 0:
+#         break
+# print("Now!")
 
 """
 Write a program which asks the user for a year, and prints out the next leap year.
@@ -68,7 +87,12 @@ Examples:
     Year: >> 2024
     The next leap year after 2024 is 2028
 """
-# Write your solution here
+# current_year = int(input("Enter a year: "))
+# while True:
+#     current_year += 1
+#     if (current_year % 4 == 0 and current_year % 100 != 0) or (current_year % 400 == 0):
+#         print(f"The next leap year after {current_year - 1} is {current_year}.")
+#         break
 
 """
 Please write a program which keeps asking the user for words. 
@@ -86,12 +110,45 @@ Example:
   Please type in a word: >> end
   Once upon a time there was a girl
 """
-# Write your solution here
+# words = []
+#
+# # Keep asking the user for words until they type "end"
+# while True:
+#     user_input = input("Please type in a word: >> ")
+#     if user_input.lower() == "end":
+#         break
+#     words.append(user_input)
+#
+# # Construct the story from the entered words
+# if words:
+#     story = " ".join(words)
+#     print(f"The story formed by the words: {story}")
+# else:
+#     print("No words entered. The story remains untold.")
 
 """
-Change the program above so that the loop ends also if the user types in the same word twice in a row.
+Change the program above so that the loop ends also ifhe user types in the same word twice in a row.
 """
-# Write your solution here
+# words = []
+# previous_word = None
+#
+# # Keep asking the user for words until they type "end" or repeat the same word
+# while True:
+#     user_input = input("Please type in a word: >> ")
+#     if user_input.lower() == "end":
+#         break
+#     elif user_input.lower() == previous_word:
+#         print("You typed the same word twice. Ending the story.")
+#         break
+#     words.append(user_input)
+#     previous_word = user_input.lower()
+#
+# # Construct the story from the entered words
+# if words:
+#     story = " ".join(words)
+#     print(f"The story formed by the words: {story}")
+# else:
+#     print("No words entered. The story remains untold.")
 
 """
 Please write a program which asks the user for integer numbers. 
@@ -110,7 +167,32 @@ Example output
   Positive numbers 3
   Negative numbers 1
 """
-# Write your solution here
+numbers = []
+positive_count = 0
+negative_count = 0
+total_sum = 0
+
+# Keep asking the user for numbers until they type 0
+# while True:
+#     user_input = int(input("Enter an integer (type 0 to stop): "))
+#     if user_input == 0:
+#           break
+#     numbers.append(user_input)
+#     total_sum += user_input
+#     if user_input > 0:
+#         positive_count += 1
+#     elif user_input < 0:
+#         negative_count += 1
+# # Calculate mean
+# num_count = len(numbers)
+# mean = total_sum / num_count if num_count > 0 else 0
+#
+# # Display results
+# print(f"Numbers entered: {num_count}")
+# print(f"Sum of numbers: {total_sum}")
+# print(f"Mean of numbers: {mean}")
+# print(f"Positive numbers: {positive_count}")
+# print(f"Negative numbers: {negative_count}")
 
 """
 Largest Number
@@ -133,7 +215,24 @@ Examples:
   Number 1: >> -1.11
   No number entered.
 """
-# Write your solution here
+# largest_number = None
+# first_number = None
+#
+# # Keep asking the user for float numbers until they type 0 or a negative number
+# while True:
+#     user_input = float(input("Enter a float number (type 0 to stop): "))
+#     if user_input <= 0:
+#         if first_number is None:
+#             print("No number entered.")
+#         break
+#     if largest_number is None or user_input > largest_number:
+#         largest_number = user_input
+#     if first_number is None:
+#         first_number = user_input
+#
+# # Print the largest number
+# if largest_number is not None:
+#     print(f"The largest number entered was: {largest_number}")
 
 """
 Write a program that reads in an integer number (number of lines) and generates the subsequent output using 
@@ -150,7 +249,16 @@ Examples:
   n: >> -1
   Invalid number!
 """
-# Write your solution here
+# n = int(input("Enter an integer (number of lines): "))
+# if n <= 0:
+#     print("Invalid number!")
+# else:
+#     current_number = 1
+#     for i in range(1, n + 1):
+#         for j in range(i):
+#             print(current_number, end=" ")
+#             current_number += 1
+#         print()
 
 """
 Write a program that uses loops to create a pyramid of stars '*' on the console. 
@@ -163,7 +271,9 @@ Example:
    *********
   ***********
 """
-# Write your solution here
+
+# for i in range(1, 7):
+#     print(" " * (6 - i) + "*" * (2 * i - 1))
 
 """
 Write a program to calculate the average grade. The console reads in grades between 1 and 5 
@@ -182,4 +292,30 @@ Example:
   Average: 3.50
   Negative marks: 2
 """
-# Write your solution here
+# # Initialize variables
+# total_grade = 0
+# count = 0
+# negative_count = 0
+# # Keep reading grades until 0 is entered
+# while True:
+#     try:
+#         grade = int(input("Enter a grade (1-5, 0 to stop): "))
+#         if grade == 0:
+#             break
+#         elif 1 <= grade <= 5:
+#             total_grade += grade
+#             count += 1
+#             if grade == 5:
+#                 negative_count += 1
+#         else:
+#             print("Invalid grade. Please enter a grade between 1 and 5.")
+#     except ValueError:
+#         print("Invalid input. Please enter an integer grade.")
+#
+# # Calculate average
+# if count > 0:
+#     average = total_grade / count
+#     print(f"Average grade: {average}")
+#     print(f"Number of negative grades (grade = 5): {negative_count}")
+# else:
+#     print("No valid grades entered.")

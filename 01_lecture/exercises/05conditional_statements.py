@@ -10,8 +10,15 @@ Example:
     Enter a number: >> 17
     The number 17 is odd.
 """
-# Write your solution here
 
+# number = int(input("Enter a number "))
+# even = number % 2 == 0
+# odd = number % 2 != 0
+#
+# if even:
+#     print(f"{number} is even.")
+# else:
+#     print(f"{number} is odd.")
 
 """
 Write a program that asks the user for their exam grade (as a percentage). 
@@ -26,8 +33,14 @@ Example:
     Enter your exam grade: >> 63
     You passed the exam!
 """
-# Write your solution here
-
+# grade = int(input("Please enter your grade percentage "))
+#
+# if grade <= 50:
+#     print("Unfortunately, you failed the exam.")
+# elif grade >= 60:
+#     print("You passed the exam!")
+# if grade >= 90:
+#     print("You are excellent!")
 
 """
 Write a program that simulates a simple lunch ordering system. 
@@ -48,4 +61,20 @@ Example:
     What kind of dressing would you like: vinaigrette, ranch, or caesar? >> ranch
     Your order: Salad with ranch dressing
 """
-# Write your solution here
+
+# order = input("Hi! Would you like a sandwich, salad, or wrap? ")
+#
+# if order == "sandwich":
+#     sandwich_kind = input("Would you like it with chicken, beef, or veggie? ")
+#     print(f"You have ordered a {order} with {sandwich_kind}")
+# elif order == "salad":
+#     salad_dressing = input("What dressing would you like? Vinaigrette, ranch or caesar? ")
+#     print(f"You have ordered a {order} with {salad_dressing}")
+# elif order == "wrap":
+#     wrap_type = input("Would you like the wrap toasted? ")
+#     if wrap_type == "yes":
+#         print(f"You have ordered a {order} that is toasted.")
+#     else:
+#         print(f"You have ordered a {order} that is not toasted.")
+# else:
+#     print("Sorry! We dont have that on the menu!")

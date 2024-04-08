@@ -16,8 +16,15 @@ Examples:
     The numbers are equal!
 
 """
-# Write your solution here
-
+# num1 = int(input("Enter the first number: "))
+# num2 = int(input("Enter the second number: "))
+#
+# if num1 > num2:
+#     print(f"{num1} is greater than {num2}.")
+# elif num1 < num2:
+#     print(f"{num2} is greater than {num1}.")
+# else:
+#     print("The numbers are equal.")
 """
 Python comparison operators can also be used on strings. 
 String a is smaller than string b if it comes alphabetically before b. Notice however that the comparison is only reliable if
@@ -42,7 +49,16 @@ Please type in the 2nd word: >> python
 You gave the same word twice.
 
 """
-# Write your solution here
+# word1 = input("Enter the first word: ")
+# word2 = input("Enter the second word: ")
+#
+# # Compare the words alphabetically
+# if word1 < word2:
+#     print(f"{word2} comes alphabetically last.")
+# elif word1 > word2:
+#     print(f"{word1} comes alphabetically last.")
+# else:
+#     print("Both words are equal.")
 
 """
 Write a program which asks for the user's name. 
@@ -59,7 +75,17 @@ Examples:
     Please type in your name: >> Ken
     You're not a nephew of any character I know of.
 """
-# Write your solution here
+# user_name = input("Enter your name: ")
+#
+# donald_nephews = ["Huey", "Dewey", "Louie"]
+# if user_name in donald_nephews:
+#     print(f"Hello, {user_name}! You are one of Donald Duck's nephews.")
+# else:
+#     mickey_nephews = ["Morty", "Ferdie"]
+#     if user_name in mickey_nephews:
+#         print(f"Hello, {user_name}! You are one of Mickey Mouse's nephews.")
+#     else:
+#         print(f"Nice to meet you, {user_name}!")
 
 """
 FizzBuzz
@@ -80,8 +106,16 @@ Examples:
     Number: >> 45
     FizzBuzz
 """
-# Write your solution here
-
+# number = int(input("Enter an integer: "))
+#
+# if number % 3 == 0 and number % 5 == 0:
+#     print("FizzBuzz")
+# elif number % 3 == 0:
+#     print("Fizz")
+# elif number % 5 == 0:
+#     print("Buzz")
+# else:
+#     print("The number is neither divisible by 3 nor 5.")
 
 """
 LeapYear
@@ -100,5 +134,10 @@ Examples:
     Please type in a year: >> 1800
     That year is not a leap year.
 """
-# Write your solution here
+# year = int(input("Enter a year: "))
+#
+# if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+#     print(f"{year} is a leap year.")
+# else:
+#     print(f"{year} is not a leap year.")
 
