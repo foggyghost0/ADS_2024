@@ -64,7 +64,6 @@ Type hints can be used to indicate the expected data types of arguments and the 
 def add(a: int, b: int) -> int:
     return a + b
 
-
 # Function with type hints
 result = add(5, 6)
 print(result)  # prints: 11

@@ -9,7 +9,11 @@ Define a function called "bark()". When executed, "Woof" should get printed to t
 Execute the function after its definition and run the program!
 """
 
-# Write your solution here
+# def bark():
+#     print("Woof")
+#
+#
+# bark()
 
 """
 ### Function with 1 Argument, additional logic ###
@@ -29,7 +33,28 @@ Examples:
     ...
 """
 
-# Write your solution here
+# def make_sound(animal):
+#
+#     animal = animal.lower()
+#
+#     if animal == "dog":
+#         return "Woof"
+#     elif animal == "cat":
+#         return "Meow"
+#     elif animal == "cow":
+#         return "Moo"
+#     else:
+#         return "???"
+#
+#
+# while True:
+#     user_input = input("Please enter an animal: >> ")
+#     if user_input.lower() == "exit":
+#         print("Exiting...")
+#         break
+#
+#     sound = make_sound(user_input)
+#     print(sound)
 
 """
 ### Function with 2 Arguments ###
@@ -50,7 +75,16 @@ Instead of "hard coding", let the user enter the text and the number of times to
 Ask the user repeatedly using a loop.
 """
 
-# Write your solution here
+# def print_many_times(text, times):
+#     while times > 0:
+#         print(text)
+#         times -= 1
+#
+#
+# input_str = input("Enter a Word >> ")
+# input_number = int(input("Enter a number >> "))
+#
+# print_many_times(input_str, input_number)
 
 """
 ### Return Values ###
@@ -59,16 +93,30 @@ Define a function named greatest_number, which takes three arguments. The functi
 three. Use the already defined function "print_greatest" and pass the return value of your function to it!
 
 Example:
-    return_value = greatest_number(3, 4, 1)
-    print_greatest(return_value)
-    The greatest number is 4!
+ 
     
 Additional Task:
 Add a type hint to the return value of the function!
 """
 
-def print_greatest(number):
-    print(f"The greatest number is {number}!")
+
+def greatest_number(a, b, c):
+    if a > b and a > c:
+        print(f"{a} is the greatest number")
+    elif b > a and b > c:
+        print(f"{b} is the greatest number")
+    else:
+        print(f"{c} is the greatest number")
+
+
+input_a = int(input("Enter a number >> "))
+input_b = int(input("Enter a number >> "))
+input_c = int(input("Enter a number >> "))
+
+greatest_number(input_a, input_b, input_c)
+# def print_greatest(number):
+#     print(f"The greatest number is {number}!")
+
 
 # Write your solution here
 
