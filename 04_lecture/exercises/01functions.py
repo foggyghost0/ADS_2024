@@ -114,11 +114,6 @@ input_b = int(input("Enter a number >> "))
 input_c = int(input("Enter a number >> "))
 
 greatest_number(input_a, input_b, input_c)
-# def print_greatest(number):
-#     print(f"The greatest number is {number}!")
-
-
-# Write your solution here
 
 """
 ### Type Hints ###
