@@ -135,7 +135,9 @@ In Python string processing the interval [a:b] is half open, which in this case 
 that the character at the beginning index ``a`` is included in the interval, but the character 
 at the end index ``b`` is left out. 
 Half open intervals may feel unintuitive, but in practice they do have some advantages. 
+
 For example, you can easily calculate the length of a slice with ``b-a``. 
+
 On the other hand, you must always remember that the character at the end index ``b`` will not be included in the slice.
 """
 
@@ -228,9 +230,10 @@ str.replace(old, new[, count])
 This method returns a string with all occurrences of the substring old substituted by the new. If the count 
 argument is given, all count number of occurrences are replaced.
 """
-sentence = "i Enjoy traveling. Do you?"
-sentence.replace('Enjoy','dislike')             # "i dislike traveling. Do you?"
-"Things fall apart".replace('a','e',1)   # "Things fell apart"
+
+# sentence = "i Enjoy traveling. Do you?"
+# sentence.replace('Enjoy','dislike')             # "i dislike traveling. Do you?"
+# "Things fall apart".replace('a','e',1)   # "Things fell apart"
 
 """
 More Examples
@@ -254,11 +257,11 @@ That means, we can iterate through them, using a for-loop
 # name = "LEON"
 # for character in name:
 #     print(character)
-#
+
 #
 # my_string = "hello"
-#
-# # Using a while loop to iterate over each character in the string
+
+# Using a while loop to iterate over each character in the string
 # index = 0
 # while index < len(my_string):
 #     print(my_string[index])

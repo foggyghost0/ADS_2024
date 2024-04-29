@@ -8,7 +8,15 @@ Example:
     Please type in an amount: >> 4
     heyheyheyhey
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Enter a string: ")
+#
+# # Get user input for the amount
+# amount_str = int(input("Enter the amount: "))
+#
+# # Print the string 'amount' times on a single line
+# print(user_string * amount_str, end='')
+
 
 """
 Write a program which asks the user for two strings and then prints out whichever is the longer of the two - 
@@ -26,7 +34,20 @@ Examples:
     world is longer
 """
 
-# Write your solution here
+# # Get user input for the first string
+# string1 = input("Enter the first string: ")
+#
+# # Get user input for the second string
+# string2 = input("Enter the second string: ")
+#
+# # Compare the lengths of the strings
+# if len(string1) > len(string2):
+#     print(f"The longer string is: {string1}")
+# elif len(string2) > len(string1):
+#     print(f"The longer string is: {string2}")
+# else:
+#     print("The strings are equally long")
+
 
 """
 Write a program which asks the user for a string. The program then prints out the input string in reversed order, 
@@ -35,7 +56,19 @@ Try to solve this example in 2 ways:
     * once using positive indeces
     * once using negative indeces
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Enter a string: ")
+#
+# # Print each character in reverse order (positive indices)
+# for character in user_string[::-1]:
+#     print(character)
+
+# # Get user input for the string
+# user_string = input("Enter a string: ")
+#
+# # Print each character in reverse order (negative indices)
+# for i in range(-1, -len(user_string) - 1, -1):
+#     print(user_string[i])
 
 """
 Write a program which asks the user for a string. 
@@ -49,7 +82,15 @@ Examples:
     Please type in a string: >> pascal
     The second and the second to last characters are a
 """
-# Write your solution here
+# Get user input for the string
+# user_string = input("Please type in a string: ")
+#
+# # Check if the second and second-to-last characters are the same
+# if user_string[1] == user_string[-2]:
+#     print("The second and the second-to-last characters are the same")
+# else:
+#     print("The second and the second-to-last characters are different")
+
 
 """
 Write a program which prints out a line of hash characters, the width of which is chosen by the user.
@@ -61,7 +102,12 @@ Examples:
     Width: >> 2
     ##
 """
-# Write your solution here
+# Get user input for the width
+
+# width = int(input("Enter the desired width: "))
+#
+# print("#" * width)
+
 
 """
 Modify the previous program so that it also asks for the height, and prints out a rectangle of hash characters accordingly.
@@ -73,13 +119,14 @@ Example:
     ##########
     ##########
 """
-# Write your solution here
+# width = int(input("Enter the desired width: "))
+# height = int(input("Enter the desired height: "))
+# for i in range(height):
+#     print("#" * width)
+
 
 """
-Write a program which asks the user for a string and then prints it out so that exactly 20 characters are displayed. 
-If the input is shorter than 20 characters, the beginning of the line is filled in with * characters.
-
-You may assume the input string is at most 20 characters long.
+ 
 
 Examples:
     Please type in a string:hello
@@ -88,7 +135,15 @@ Examples:
     Please type in a string:helloworld
     **********helloworld 
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Enter a string: ")
+#
+# # Calculate the number of asterisks needed
+# num_asterisks = max(0, 20 - len(user_string))
+#
+# # Print the result
+# print("*" * num_asterisks + user_string)
+
 
 """
 Please write a program which asks the user for a string and then prints out a frame of * characters with the word in the centre. 
@@ -109,7 +164,20 @@ Examples:
     *           python           *
     ******************************
 """
-# Write your solution here
+
+# # Get user input for the string
+# user_string = input("Enter a string: ")
+#
+# # Calculate the remaining space for the frame
+# remaining_space = 30 - len(user_string)
+#
+# # Calculate the left and right padding
+# left_padding = remaining_space // 2
+# right_padding = remaining_space - left_padding
+#
+# # Print the framed word
+# print("*" * 15, user_string.center(30, "*"), "*" * 15, sep="\n")
+
 
 
 """
@@ -124,7 +192,14 @@ Example:
     tes
     test
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Please type in a string: ")
+#
+# # Print all substrings starting with the first character
+# for i in range(len(user_string)):
+#     for j in range(i, len(user_string)):
+#         print(user_string[i:j + 1])
+
 
 """
 Write a program which asks the user to type in a string. 
@@ -138,7 +213,15 @@ Example:
     est
     test
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Please type in a string: ")
+#
+# # Print all substrings ending with the last character
+# for i in range(len(user_string)):
+#     print(user_string[i:])
+#
+# # Note: This includes the entire string itself as well.
+
 
 """
 Write a program which asks the user to input a string. The program then prints out different messages if the string 
@@ -156,7 +239,25 @@ You may assume the input will be in lowercase entirely. Have a look at the examp
     e not found
     o not found
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Please type in a string: ")
+#
+# # Check if the string contains any of the vowels
+# if 'a' in user_string:
+#     print("a found")
+# else:
+#     print("a not found")
+#
+# if 'e' in user_string:
+#     print("e found")
+# else:
+#     print("e not found")
+#
+# if 'o' in user_string:
+#     print("o found")
+# else:
+#     print("o not found")
+
 
 
 """
@@ -182,7 +283,22 @@ Examples:
     Please type in a word: >> python
     Please type in a character: >> n
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Please type in a word: ")
+#
+# # Get user input for the character
+# user_char = input("Please type in a character: ")
+#
+# # Find the index of the specified character
+# char_index = user_string.find(user_char)
+#
+# # Check if the character is found
+# if char_index != -1:
+#     # Print the first three characters starting from the specified character
+#     print(user_string[char_index:char_index + 3])
+# else:
+#     print("Character not found in the string.")
+
 
 """
 Write a program which finds the second occurrence of a substring. If there is no second (or first) occurrence, 
@@ -205,4 +321,22 @@ Examples:
     Please type in a substring: >> ba
     The substring does not occur twice in the string.
 """
-# Write your solution here
+# # Get user input for the string
+# user_string = input("Please type in a string: ")
+#
+# # Get user input for the substring
+# user_substring = input("Please type in a substring: ")
+#
+# # Find the index of the first occurrence
+# first_occurrence = user_string.find(user_substring)
+#
+# # Check if the substring appears at least once
+# if first_occurrence != -1:
+#     # Find the index of the second occurrence, starting after the first
+#     second_occurrence = user_string.find(user_substring, first_occurrence + 1)
+#     if second_occurrence != -1:
+#         print(f"The second occurrence of the substring is at index {second_occurrence}.")
+#     else:
+#         print("The substring appears only once in the string.")
+# else:
+#     print("Specified substring not found.")

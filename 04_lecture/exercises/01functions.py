@@ -100,20 +100,20 @@ Add a type hint to the return value of the function!
 """
 
 
-def greatest_number(a, b, c):
-    if a > b and a > c:
-        print(f"{a} is the greatest number")
-    elif b > a and b > c:
-        print(f"{b} is the greatest number")
-    else:
-        print(f"{c} is the greatest number")
-
-
-input_a = int(input("Enter a number >> "))
-input_b = int(input("Enter a number >> "))
-input_c = int(input("Enter a number >> "))
-
-greatest_number(input_a, input_b, input_c)
+# def greatest_number(a, b, c):
+#     if a > b and a > c:
+#         print(f"{a} is the greatest number")
+#     elif b > a and b > c:
+#         print(f"{b} is the greatest number")
+#     else:
+#         print(f"{c} is the greatest number")
+#
+#
+# input_a = int(input("Enter a number >> "))
+# input_b = int(input("Enter a number >> "))
+# input_c = int(input("Enter a number >> "))
+#
+# greatest_number(input_a, input_b, input_c)
 
 """
 ### Type Hints ###
@@ -121,7 +121,22 @@ greatest_number(input_a, input_b, input_c)
 Refactor your programs from above and add type hints to all function arguments and return values (if available)!
 """
 
-# No code here, refactor the programs above!
+
+# def greatest_number(a: int, b: int, c: int) -> None:
+#     if a > b and a > c:
+#         print(f"{a} is the greatest number")
+#     elif b > a and b > c:
+#         print(f"{b} is the greatest number")
+#     else:
+#         print(f"{c} is the greatest number")
+#
+#
+# input_a = int(input("Enter a number >> "))
+# input_b = int(input("Enter a number >> "))
+# input_c = int(input("Enter a number >> "))
+#
+# greatest_number(input_a, input_b, input_c)
+
 
 """
 ### Named arguments ###
@@ -136,7 +151,23 @@ Example Outputs:
     hello world
 """
 
-# Write your solution here
+
+# def super_print(text: str, uppercase: bool) -> None:
+#     """
+#     Prints the given text either as it was or in all uppercase.
+#
+#     Args:
+#         text (str): The input text.
+#         uppercase (bool): If True, print in uppercase; otherwise, print as is.
+#     """
+#     if uppercase:
+#         print(text.upper())
+#     else:
+#         print(text)
+#
+#
+# super_print("HEllO world", uppercase=False)
+# super_print("hello world", uppercase=True)
 
 """
 ### Default Values ###
@@ -154,4 +185,25 @@ Example:
     Hello Unknown!
 """
 
-# Write your solution here
+
+# def greet(name: str = "Unknown"):
+#     """
+#     Prints a greeting message for the entered name.
+#
+#     Args:
+#         name (str, optional): The name to greet. Defaults to "Unknown".
+#     """
+#     print(f"Hello {name}!")
+#
+#
+# # Get user input for the name
+# user_name = input("Please enter your name: ")
+# if user_name:
+#     greet(user_name)
+# else:
+#     greet()
+
+
+# Get user input for the name
+
+
