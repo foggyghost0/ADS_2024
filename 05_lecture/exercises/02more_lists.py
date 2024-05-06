@@ -11,7 +11,25 @@ For example, with the function call list_of_stars([3, 7, 1, 1, 2]) the following
     **
 
 """
-# Provide your solution here
+
+
+def list_of_stars(list1):
+    for i in list1:
+        print(i * "*")
+
+
+mylist = [5, 10, 4, 6, 20]
+list_of_stars(mylist)
+
+
+# or
+def list_of_stars_1(list1):
+    for i in range(0, len(list1)):
+        print(list1[i] * "*")
+
+
+mylist = [5, 10, 4, 6, 20]
+list_of_stars_1(mylist)
 
 """
 Write a function named anagrams, which takes two strings as arguments. 

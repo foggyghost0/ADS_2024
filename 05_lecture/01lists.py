@@ -4,13 +4,21 @@ LISTS
 
 """
 From range to list
-
 """
-numbers0 = range(2, 7)
-print(range)
+"""
 
+
+?????
+numbers0 = range(2, 7)
+print(numbers0)
+????
+
+
+good->
 numbers1 = list(range(2, 7))
 print(numbers1)
+
+"""
 
 """
 LIST INITIALIZATION
