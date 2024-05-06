@@ -3,6 +3,16 @@ LISTS
 """
 
 """
+From range to list
+
+"""
+numbers0 = range(2, 7)
+print(range)
+
+numbers1 = list(range(2, 7))
+print(numbers1)
+
+"""
 LIST INITIALIZATION
 Lists can be initialized with square brackets containing elements.
 """
