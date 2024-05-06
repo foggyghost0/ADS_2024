@@ -14,7 +14,20 @@ Example Output:
     Filtered list: [2, 4, 6, ..., 20]
 """
 
-# Write your solution here
+# # Initialize an empty list
+# original_list = []
+#
+# # Fill the list with numbers from 1 to 20 using a loop
+# for i in range(1, 21):
+#     original_list.append(i)
+#
+# # Create a new list with even numbers using list comprehension
+# filtered_list = [x for x in original_list if x % 2 == 0]
+#
+# # Print the original and filtered lists
+# print(f"Original list: {original_list}")
+# print(f"Filtered list: {filtered_list}")
+
 
 """
 ### Exercise 2: Todo List Application ###
@@ -41,7 +54,35 @@ Example Interaction:
     Exiting...
 """
 
-# Write your solution here
+# Start with an empty list named "todos"
+todos = []
+
+# Use a loop to handle user inputs and modify the list accordingly
+# while True:
+#     # Ask the user for a task or command
+#     command = input("Please enter a task or command: >> ").strip().lower()
+#
+#     # Check the user input and perform the corresponding action
+#     if command == 'done':
+#         # Print the final list of tasks and exit the loop
+#         print(f"Final tasks: {todos}")
+#         print("Exiting...")
+#         break
+#     elif command == 'remove':
+#         # Remove the last task if the list is not empty
+#         if todos:
+#             todos.pop()
+#             print("Last task removed.")
+#         else:
+#             print("No tasks to remove.")
+#     elif command == 'view':
+#         # Display all the tasks
+#         print(f"Current tasks: {todos}")
+#     else:
+#         # Add a new task to the list
+#         todos.append(command)
+#         print("Task added.")
+
 
 """
 ### Exercise 3: Analyzing Numbers ###
@@ -68,4 +109,24 @@ If you want, you can research "dictionaries" in Python and structure your soluti
     }
 """
 
-# Write your solution here
+
+# # Function to calculate max, min, average, and numbers under average
+# def analyze_numbers(numbers):
+#     max_value = max(numbers)
+#     min_value = min(numbers)
+#     average = sum(numbers) / len(numbers)
+#     under_avg = [num for num in numbers if num < average]
+#
+#     # Return a new list with the computed values
+#     return [max_value, min_value, average, under_avg]
+#
+#
+# # Initialize a list with numbers
+# numbers_list = [1, 2, 3]  # Example input
+#
+# # Call the function and store the result
+# result = analyze_numbers(numbers_list)
+#
+# # Print the result
+# print(result)
+
