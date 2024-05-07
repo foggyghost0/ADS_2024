@@ -95,18 +95,18 @@ The function returns a new list containing the even numbers from the original li
         original [1, 2, 3, 4, 5]
         new [2, 4]
 """
-# def even_numbers(numbers):
-#     """
-#     Returns a new list containing even numbers from the input list.
-#     """
-#     return [num for num in numbers if num % 2 == 0]
-#
-# # Example usage
-# my_list = [1, 2, 3, 4, 5]
-# new_list = even_numbers(my_list)
-#
-# print("original", my_list)
-# print("new", new_list)
+def even_numbers(numbers):
+    """
+    Returns a new list containing even numbers from the input list.
+    """
+    return [num for num in numbers if num % 2 == 0]
+
+# Example usage
+my_list = [1, 2, 3, 4, 5]
+new_list = even_numbers(my_list)
+
+print("original", my_list)
+print("new", new_list)
 
 
 
@@ -121,14 +121,14 @@ An example of the function at work:
     b = [7, 8, 9]
     print(list_sum(a, b)) # [8, 10, 12]
 """
-# def list_sum(list1, list2):
-#     """
-#     Returns a new list with the sums of the corresponding items of the two input lists.
-#     """
-#     return [x + y for x, y in zip(list1, list2)]
-#
-# # Example usage
-# a = [1, 2, 3]
-# b = [7, 8, 9]
-# print(list_sum(a, b))  # Output: [8, 10, 12]
+def list_sum(list1, list2):
+    """
+    Returns a new list with the sums of the corresponding items of the two input lists.
+    """
+    return [x + y for x, y in zip(list1, list2)]
+
+# Example usage
+a = [1, 2, 3]
+b = [7, 8, 9]
+print(list_sum(a, b))  # Output: [8, 10, 12]
 

@@ -1,6 +1,110 @@
 """
 LISTS
 """
+# Python program to show how to use the index function to find the index of an element in the list
+
+# Creating a list
+info = ["Peter Parker", 35, "New York", 3.45]
+
+# Getting the index of the string "New York" from the list
+index_ = info.index("New York")
+print(index_)
+
+# Getting the index of an element not in the list
+index1 = info.index(34)
+print(index1)
+------------------------------------
+# Python program to show how to use the index function to find multiple indices from the list
+
+# Creating a list
+info = ["Peter Parker", 35, "New York", 3.45]
+
+# Creating s list of items we want to find in the list
+imp = ['New York', 35]
+
+# Finding multiple indices using the for loop
+indices = []
+for ind, i in enumerate(info):
+    if i in imp:
+        indices.append(ind)
+print(indices)
+
+# Finding multiple indices using list comprehension
+indices = [ind for ind, i in enumerate(info) if i in imp]
+print(indices)
+
+
+----------------------------------
+
+# Python program to show how to search for an item in the list using the in operator
+
+list_ = ["Peter Parker", 35, "New York", 3.45]
+item = 3.45
+
+# Element is in the list
+if item in list_:
+    print("Item is found in the list")
+else:
+    print("Item not found in the list")
+
+item = 'London'
+# Element is not on the list
+if item in list_:
+    print("Item is found in the list")
+else:
+    print("Item not found in the list")
+
+-----------------------------------------
+
+# Python program to show how to search for an item in the list using a for loop
+
+def searchList(list_, item):
+    for i in range(len(list_)):
+        if list_[i] == item:
+            return True
+    return False
+
+
+list_ = ["Peter Parker", 35, "New York", 3.45]
+item = 3.45
+
+# Element is in the list
+if searchList(list_, item):
+    print("Item is found in the list")
+else:
+    print("Item not found in the list")
+
+item = 'London'
+# Element is not on the list
+if searchList(list_, item):
+    print("Item is found in the list")
+else:
+    print("Item not found in the list")
+
+--------------------------------------
+
+# Python program to show how to filter a list
+
+list_ = ["Peter Parker", "Actor", "New York", "Spider Man"]
+
+# Element is in the list
+
+result = any(len(item) == 5 for item in list_)
+if result:
+    print("A string of length 5 is found in the list")
+else:
+    print("A string of length 5 is not found in the list")
+
+# Element is not on the list
+
+result = any(len(item) == 6 for item in list_)
+if result:
+    print("A string of length 6 is found in the list")
+else:
+    print("A string of length 6 is not found in the list")
+
+------------------------------------------
+
 
 """
 From range to list
