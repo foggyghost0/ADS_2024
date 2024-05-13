@@ -10,7 +10,6 @@ Notice that the function does not take any arguments. The file you are working w
 def largest():
     with open('numbers.txt', 'r') as file:
         numbers = file.readlines()
-        # Convert each line into an integer and find the maximum
         max_number = max(int(number.strip()) for number in numbers)
     return max_number
 
@@ -32,7 +31,7 @@ NB: the function does not take any arguments. The file you are working with is a
 
 def read_fruits():
     fruit_prices = {}
-    with open('fruits.csv', 'r') as file:
+    with open('fruits.csv') as file:
         for line in file:
             fruit_name, price_f = line.strip().split(';')
             fruit_prices[fruit_name] = float(price_f)
