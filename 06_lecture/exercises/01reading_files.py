@@ -5,7 +5,18 @@ Write a function named largest, which reads the file and returns the largest num
 
 Notice that the function does not take any arguments. The file you are working with is always named numbers.txt.
 """
-# Write your solution here
+
+
+def largest():
+    with open('numbers.txt', 'r') as file:
+        numbers = file.readlines()
+        # Convert each line into an integer and find the maximum
+        max_number = max(int(number.strip()) for number in numbers)
+    return max_number
+
+
+# Example usage:
+print(largest())
 
 
 """
@@ -17,7 +28,21 @@ Prices should be of type float.
 
 NB: the function does not take any arguments. The file you are working with is always named fruits.csv.
 """
-# Write your solution here
+
+
+def read_fruits():
+    fruit_prices = {}
+    with open('fruits.csv', 'r') as file:
+        for line in file:
+            fruit_name, price_f = line.strip().split(';')
+            fruit_prices[fruit_name] = float(price_f)
+    return fruit_prices
+
+
+fruit_dict = read_fruits()
+for fruit, price in fruit_dict.items():
+    print(f"{fruit}: ${price:.2f}")
+
 
 """
 The file matrix.txt contains a matrix (see matrix.csv)
